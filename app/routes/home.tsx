@@ -26,73 +26,63 @@ export default function Home({ actionData }: Route.ComponentProps) {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center bg-[#2e3440]">
       <div className="flex flex-col items-center justify-center border-2 border-[#d8dee9] rounded-xl">
-        <h1 className="text-3xl text-[#d8dee9] m-5 mt-5">AzikGeneratorWeb</h1>
+        <h1 className="text-3xl text-[#d8dee9] m-auto mt-auto">
+          AzikGeneratorWeb
+        </h1>
         <Form
           method="POST"
           className="flex flex-col items center justify-center rounded-2xl"
         >
-          <div className="flex flex-col items-end justify-center bg-[#2e3440] rounded-2xl">
-            <label className="m-2 text-xl">
-              token
-              <input
-                className="bg-[#4c566a] my-2 ml-2 rounded-md"
-                type="text"
-                name="token"
-                placeholder="z"
-              />
-            </label>
-            <label className="m-2 text-xl">
-              sequence
-              <input
-                className="bg-[#4c566a] my-2 ml-2 rounded-md"
-                type="text"
-                name="sequence"
-                placeholder="ann"
-              />
-            </label>
-            <label className="m-2 text-xl">
-              sokuon
-              <input
-                className="bg-[#4c566a] my-2 ml-2 rounded-md"
-                type="text"
-                name="sokuon"
-                placeholder=";"
-              />
-            </label>
-            <label className="m-2 text-xl">
-              hatsuon
-              <input
-                className="bg-[#4c566a] my-2 ml-2 rounded-md"
-                type="text"
-                name="hatsuon"
-                placeholder="q"
-              />
-            </label>
+          <div className="flex flex-col items-center justify-center bg-[#2e3440] rounded-2xl">
+            <input
+              className="bg-[#4c566a] my-2 py-0.5 w-3xs rounded-md"
+              type="text"
+              name="token"
+              placeholder="割り当て先"
+            />
+            <input
+              className="bg-[#4c566a] my-2 py-0.5 w-3xs rounded-md"
+              type="text"
+              name="sequence"
+              placeholder="シーケンス"
+            />
+            <input
+              className="bg-[#4c566a] my-2 py-0.5 w-3xs rounded-md"
+              type="text"
+              name="sokuon"
+              placeholder='"っ"の割り当て先'
+            />
+            <input
+              className="bg-[#4c566a] my-2 mb-4 py-0.5 w-3xs rounded-md"
+              type="text"
+              name="hatsuon"
+              placeholder='"ん"の割り当て先'
+            />
           </div>
           <div className="flex flwex-col items-center justify-center">
             <button
-              className="bg-[#444444] mb-2 py-1.5 w-sm rounded-xl"
+              className="bg-[#444444] mb-2 py-1.5 w-xs rounded-xl"
               type="submit"
             >
               send
             </button>
+            {actionData
+              ? (
+                <p>
+                  <div className="flex items-center justify-center">
+                    <a
+                      className="bg-[#444444] mb-2 py-1.5 w-xs rounded-xl text-center"
+                      href={DownloadButton}
+                      download="GoogleIMEKanaTable.txt"
+                    >
+                      DownloadKanaTable
+                    </a>
+                  </div>
+                </p>
+              )
+              : null}
           </div>
         </Form>
-        {actionData
-          ? (
-            <p>
-              <div className="flex items-center justify-center">
-                <a
-                  className="bg-[#444444] mb-2 py-1.5 w-sm rounded-xl text-center"
-                  href={DownloadButton}
-                  download="GoogleIMEKanaTable.txt"
-                >
-                  DownloadKanaTable
-                </a>
-              </div>
-            </p>
-          )
-          : null}
       </div>
     </div>
   );

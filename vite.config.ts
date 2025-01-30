@@ -8,8 +8,8 @@ export default defineConfig(({ isSsrBuild }) => ({
   build: {
     rollupOptions: isSsrBuild
       ? {
-          input: "./workers/app.ts",
-        }
+        input: "./workers/app.ts",
+      }
       : undefined,
   },
   plugins: [
