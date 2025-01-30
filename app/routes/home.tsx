@@ -24,7 +24,7 @@ export default function Home({ actionData }: Route.ComponentProps) {
     encodeURIComponent(AzikFile);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#2e3440]">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-[#2e3440] overflow-hidden">
       <div className="flex flex-col items-center justify-center border-2 border-[#d8dee9] rounded-xl">
         <h1 className="text-3xl text-[#d8dee9] m-auto mt-auto">
           AzikGeneratorWeb
