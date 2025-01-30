@@ -24,16 +24,16 @@ export default function Home({ actionData }: Route.ComponentProps) {
     encodeURIComponent(AzikFile);
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#2e3440] overflow-hidden">
+    <div className="min-h-svh flex flex-col items-center justify-center bg-[#2e3440] overflow-hidden">
       <div className="flex flex-col items-center justify-center border-2 border-[#d8dee9] rounded-xl">
-        <h1 className="text-3xl text-[#d8dee9] m-auto mt-auto">
+        <h1 className="text-3xl text-[#d8dee9] m-auto mt-5">
           AzikGeneratorWeb
         </h1>
         <Form
           method="POST"
           className="flex flex-col items center justify-center rounded-2xl"
         >
-          <div className="flex flex-col items-center justify-center bg-[#2e3440] rounded-2xl">
+          <div className="flex flex-col items-center justify-center bg-[#2e3440] rounded-2xl m-5">
             <input
               className="bg-[#4c566a] my-2 py-0.5 w-3xs rounded-md"
               type="text"
@@ -61,7 +61,7 @@ export default function Home({ actionData }: Route.ComponentProps) {
           </div>
           <div className="flex flwex-col items-center justify-center">
             <button
-              className="bg-[#444444] mb-2 py-1.5 w-xs rounded-xl"
+              className="bg-[#444444] mb-2 py-1.5 px-2 w-auto rounded-xl"
               type="submit"
             >
               send
@@ -71,7 +71,7 @@ export default function Home({ actionData }: Route.ComponentProps) {
                 <p>
                   <div className="flex items-center justify-center">
                     <a
-                      className="bg-[#444444] mb-2 py-1.5 w-xs rounded-xl text-center"
+                      className="bg-[#444444] mb-2 p-1.5 mx-2 w-auto rounded-xl text-center"
                       href={DownloadButton}
                       download="GoogleIMEKanaTable.txt"
                     >
