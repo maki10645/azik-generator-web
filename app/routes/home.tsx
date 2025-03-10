@@ -23,7 +23,7 @@ export async function action({ request }: Route.ActionArgs) {
 
 	console.log(sequenceArray);
 
-	const res = await axios.post("https://azik-generator-web-i0sb.shuttle.app", {
+	const res = await axios.post("https://api.makiyuki.blog", {
 		Sequence: sequenceArray,
 		Sokuon: sokuon,
 		Hatsuon: hatsuon,
